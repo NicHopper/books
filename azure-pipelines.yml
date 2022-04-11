@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: windows-latest #Changed from ubuntu to Windows
+  vmImage: ubuntu-latest #Changed from ubuntu to Windows
 
 steps:
 - task: VSBuild@1
