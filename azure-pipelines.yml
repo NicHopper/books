@@ -7,15 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: windows-latest #Changed from ubuntu to Windows as it needs VS support
+  vmImage: windows-latest #Changed from ubuntu to Windows as it needs VS
+
+steps:
 - task: VSBuild@1
   inputs:
     solution: '**\*.sln'
     vsVersion: '16.0'
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
-
-steps:
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
